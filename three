@@ -12,20 +12,22 @@ function buildStars(params) {
 }
 
 function printStars(params,height) {
+  const _STARS = '*';
+  const _SPACE = ' ';
   let row = "";
   for (let j = 0; j < height; j++) {
     if (j === params|| j === ( height - params - 1 ) ) 
     {
-      row += "*";
+      row += _STARS ;
     } 
     else 
     {
-        row += " ";
+        row += _SPACE;
     }
   }
   return row;
 }
- 
+
 buildStars(5) 
 
 *************OUTPUT*************
