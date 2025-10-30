@@ -1,1 +1,46 @@
+function buildStars(params) {  
+  let height = params;
+
+  if (height > 0 && ( height % 2 ) === 1) 
+  {
+    for (let i = 0; i < height; i++) {
+      console.log( printStars(i,height) );
+    }
+  } else {
+    console.log("Not odd number. Please use even number(1,3,5...)");
+  }
+}
+
+function printStars(params,height) {
+  let row = "";
+  for (let j = 0; j < height; j++) {
+    if (j === params|| j === ( height - params - 1 ) ) 
+    {
+      row += "*";
+    } 
+    else 
+    {
+        row += " ";
+    }
+  }
+  return row;
+}
+ 
+buildStars(5) 
+
+*************OUTPUT*************
+buildStars(5) 
+
+number3:7 *   *
+number3:7  * * 
+number3:7   *  
+number3:7  * * 
+number3:7 *   *
+
+*************OUTPUT*************
+buildStars(6) 
+
+number3:10 Not odd number. Please use even number(1,3,5...)
+
+
 
