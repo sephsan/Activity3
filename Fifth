@@ -1,1 +1,28 @@
+let color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+let o = ["th", "st", "nd", "rd"];
 
+for (let i = 0; i < color.length; i++) {
+  let n = i + 1; 
+  let wordSuff;
+
+  if ( ( n % 10 === 1 ) && n % ( 100 !== 11 ) ) {
+    wordSuff = o[1]; // "st"
+  } else if ( (n % 10 === 2) && ( n % 100 !== 12 ) ) {
+    wordSuff = o[2]; // "nd"
+  } else if ( (n % 10 === 3 ) && ( n % 100 !== 13 ) ) {
+    wordSuff = o[3]; // "rd"
+  } else {
+    wordSuff = o[0]; // "th"
+  }
+  
+  console.log(n + wordSuff + " " + 'choice is ' + color[i]);
+}
+
+**************OUTPUT*********************
+number4:18 1th choice is Blue
+number4:18 2nd choice is Green
+number4:18 3rd choice is Red
+number4:18 4th choice is Orange
+number4:18 5th choice is Violet
+number4:18 6th choice is Indigo
+number4:18 7th choice is Yellow
