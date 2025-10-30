@@ -1,17 +1,17 @@
 function buildStars(params,len) {
-    const _star = '*';
-    const _space = ' ';
+    const _STAR = '*';
+    const _SPACE = ' ';
     let str = "";
     let offset = len - params;
    
     while(offset > 0 )
     {
-        str = _space + str; 
+        str = _SPACE + str; 
         offset--;
     }
     while (params  > 0) 
     {
-       str =  str + _star;
+       str =  str + _STAR;
         params--;
     }
     return str;
