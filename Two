@@ -1,1 +1,37 @@
-test
+function buildStars(params,len) {
+    const _star = '*';
+    const _space = ' ';
+    let str = "";
+    let offset = len - params;
+   
+    while(offset > 0 )
+    {
+        str = _space + str; 
+        offset--;
+    }
+    while (params  > 0) 
+    {
+       str =  str + _star;
+        params--;
+    }
+    return str;
+    
+}
+function printStars(params) {
+    let len = params;
+    while (params > 0) {
+        console.log(buildStars(params,len) );
+        params--;
+    }
+}
+
+printStars(5);
+
+************ Output*************
+
+number2:23 *****
+number2:23  ****
+number2:23   ***
+number2:23    **
+number2:23     *
+
