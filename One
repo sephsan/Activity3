@@ -1,1 +1,36 @@
-tst
+var number = 661; 
+
+
+if (number < 1 || number > 999) {
+  console.log("Please enter a number between 1 and 999.");
+} else {
+  var ones = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+  var teens = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+  var tens = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+
+  var words = "";
+
+  if (number >= 100) {
+    var hundreds = Math.floor(number / 100);
+    words += ones[hundreds] + " Hundred";
+    number = number % 100; // Get remainder
+    if (number > 0) words += " ";
+  }
+
+  if (number >= 20) {
+    var tensDigit = Math.floor(number / 10);
+    words += tens[tensDigit];
+    var onesDigit = number % 10;
+    if (onesDigit > 0) words += " " + ones[onesDigit];
+  } else if (number >= 10 && number < 20) {
+    words += teens[number - 10];
+  } else if (number > 0 && number < 10) {
+    words += ones[number];
+  }
+
+  console.log(words);
+}
+
+Output
+----------------------------------------------
+number1:31 Six Hundred Sixty One
